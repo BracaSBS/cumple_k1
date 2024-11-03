@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinanza</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="game.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h2>Juego de Adivinanza</h2>
+        <p>Estoy pensando en un número entre 1 y 20. ¿Cuál crees que es?</p>
+        <input type="number" id="guess-input" placeholder="Introduce tu adivinanza" min="1" max="100">
+        <button class="guess-button" onclick="checkGuess()">Adivinar</button>
+        <p id="feedback" class="feedback-message"></p>
+        <button class="restart-button" onclick="restartGame()" style="display: none;">Reiniciar Juego</button>
+        <div class="navigation-links">
+            <a href="index.html" class="nav-button">Inicio</a>
+            <a href="mensaje.html" class="nav-button">Mensaje Sorpresa</a>
+            <a href="tarjeta.html" class="nav-button">Tarjeta</a>
+        </div>
+    </div>
+</body>
+</html>

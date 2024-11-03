@@ -1,0 +1,381 @@
+/* Estilo para la página de bienvenida animada */
+.welcome {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    animation: fadeIn 3s ease-in;
+}
+
+.animated-text {
+    font-size: 2.5rem;
+    color: rgb(236, 173, 236);
+    animation: typing 3s steps(30), blink .5s step-end infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid;
+}
+
+/* Animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* Estilo para la tarjeta de cumpleaños interactiva */
+/* Estilo específico para la tarjeta */
+/* Estilo específico para la tarjeta */
+/* Estilo específico para la tarjeta */
+.card {
+    padding: 20px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #ffccbc, #d1c4e9); /* Degradado suave que combina */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #333; /* Color del texto para buena legibilidad */
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card.opened .card-content {
+    opacity: 1;
+}
+
+/* Estilo para el reproductor de música */
+audio {
+    display: block;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Estilo para el juego o desafío divertido */
+.quiz-container {
+    text-align: center;
+    margin: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para la tarjeta del mensaje */
+.message-card {
+    padding: 20px;
+    margin: 20px auto; /* Centrar la tarjeta horizontalmente */
+    background: white; /* Fondo blanco para la tarjeta */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
+    max-width: 400px; /* Ancho máximo para la tarjeta */
+    transition: transform 0.3s; /* Transición para el efecto de zoom */
+}
+.message-card:hover {
+    transform: scale(1.03); /* Efecto de zoom al pasar el ratón */
+}
+/* Estilo para el mensaje */
+#surprise-message {
+    font-size: 1.2em; /* Tamaño de fuente para el mensaje */
+    color: #d81b60; /* Color del mensaje */
+    margin: 20px 0; /* Margen alrededor del mensaje */
+}
+/* Estilo para el botón que muestra el mensaje */
+.show-message-button {
+    background: #ff4081; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    font-size: 1em; /* Tamaño de fuente del botón */
+    transition: background 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+
+/* Estilo para el mensaje sorpresa con animación */
+.surprise-message p {
+    font-size: 1.5rem;
+    color: #6a11cb;
+    animation: reveal 1s forwards;
+}
+/* Estilo para la tarjeta de mensaje sorpresa */
+.surprise-card {
+    padding: 20px;
+    margin: 20px auto; /* Centrar la tarjeta horizontalmente */
+    background: linear-gradient(135deg, #ffecb3, #ffe0b2); /* Degradado suave */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #333; /* Color del texto para buena legibilidad */
+    line-height: 1.6;
+    max-width: 600px; /* Ancho máximo para la tarjeta */
+    animation: fadeIn 0.5s ease-in; /* Animación de entrada */
+    transition: transform 0.3s; /* Transición para el efecto de zoom */
+}
+
+.surprise-card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+@keyframes reveal {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.balloon-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    border-radius: 30px;
+    background: radial-gradient(circle, #ff4d4d, #b30000);
+    bottom: 0;
+    animation: rise 5s infinite ease-in forwards;
+}
+
+#balloon1 {
+    left: 10%;
+    background: radial-gradient(circle, #ff4d4d, #b30000);
+}
+#balloon2 {
+    left: 30%;
+    background: radial-gradient(circle, #ffcc00, #b3a300);
+}
+#balloon3 {
+    left: 50%;
+    background: radial-gradient(circle, #4dff4d, #008000);
+}
+#balloon4 {
+    left: 70%;
+    background: radial-gradient(circle, #1a75ff, #004080);
+}
+#balloon5 {
+    left: 90%;
+    background: radial-gradient(circle, #ff80ff, #b3006b);
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-800px); }
+}
+
+.nav-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: transform 0.2s, background 0.3s;
+    text-align: center;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s, padding 0.3s;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+/* Títulos */
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Botones de navegación */
+.nav-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* Estilo de elementos específicos */
+.card, .quiz-container, .surprise-message, .balloon-container {
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Audio y otros elementos */
+audio {
+    margin-top: 20px;
+}
+
+/* Botones interactivos */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilo para el contenedor del juego */
+.game-container {
+    text-align: center; /* Centrar el contenido */
+    padding: 50px 20px; /* Espacio alrededor del contenido */
+    background: linear-gradient(135deg, #e1bee7, #f8bbd0); /* Degradado de fondo */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor */
+    max-width: 400px; /* Ancho máximo para el contenedor */
+    margin: auto; /* Centrar el contenedor horizontalmente */
+}
+
+/* Estilo para los botones del juego */
+.guess-button, .restart-button {
+    background: #ff4081; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    font-size: 1em; /* Tamaño de fuente del botón */
+    transition: background 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.guess-button:hover, .restart-button:hover {
+    background: #f50057; /* Color al pasar el ratón */
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Estilo para el mensaje de feedback */
+.feedback-message {
+    font-size: 1.2em; /* Tamaño de fuente para el mensaje de feedback */
+    margin: 20px 0; /* Margen alrededor del mensaje */
+    color: #d81b60; /* Color del mensaje */
+}
+
+.music-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e1bee7, #f8bbd0);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+}
+#lyrics {
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: left; /* Alineación a la izquierda para la letra */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
